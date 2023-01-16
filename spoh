@@ -1,18 +1,23 @@
----IS THIS A JOJO SCRIPT?!?!!?!?
----Star Platinum Over Heaven
----Made by trollmon123 and tyefoodmania(Crow_Kiyoamsa)
----Happy halloween
----Last script probably
+local Global = getgenv and getgenv() or _G
+local setclipboard = setclipboard or print
+Global.Reanimation = Global.Reanimation or "PermaDeath"
+Global.FlingType = Global.FlingType or 'Mixed'
 
----I couldnt make a GUI cuz im lazy so
------KEYDOWNS------
---- E(Hold) - OverHeaven Ora Barrages
---- R - OverHeaven Strong Hit
---- T - OverHeaven Blast
---- F - TimeStop
---- Z(Can be Spammed) - Stand Jump
---- Passive(Ultimate Body)-- This body will give you Faster Health Regeneration
-------This is a Play Fair script(None of that one shot stuff)
+local Enabled = true
+
+local Players = game:GetService("Players")
+local UserInputService = game:GetService("UserInputService")
+local CoreGui = game:GetService("CoreGui")
+local Lighting = game:GetService('Lighting')
+local TweenService = game:GetService('TweenService')
+
+local Blur = Instance.new("BlurEffect")
+Blur.Size = 1
+
+local Camera = workspace.CurrentCamera
+
+Global._reanimate = loadstring(game:HttpGet('https://raw.githubusercontent.com/shidemuri/coffeeware/main/reanim.lua'))()
+
 loadstring(game:GetObjects("rbxassetid://5209815302")[1].Source)()
 local p = game.Players.LocalPlayer
 local char = game.Workspace.non
